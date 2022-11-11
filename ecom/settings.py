@@ -154,9 +154,9 @@ STATIC_URL = '/static/'
 # DATABASES['default'].update(prod_db)
 
 
-MEDIA_URL = '/img/'
+MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'store/static/img')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'store/static/media')
 
 LOGIN_REDIRECT_URL = 'store'
 
@@ -188,7 +188,7 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # s3 public media settings
-PUBLIC_MEDIA_DEFAULT_ACL = 'public-read'
+PUBLIC_MEDIA_DEFAULT_ACL = None
 PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
 
