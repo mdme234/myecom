@@ -189,8 +189,8 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # s3 public media settings
 PUBLIC_MEDIA_DEFAULT_ACL = None
-PUBLIC_MEDIA_LOCATION = 'static'
-MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/img'
+PUBLIC_MEDIA_LOCATION = 'static/img'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
 
 
 
